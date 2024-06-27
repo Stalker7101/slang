@@ -76,6 +76,7 @@ void registerCompilation(py::module_& m) {
         .def_readwrite("topModules", &CompilationOptions::topModules)
         .def_readwrite("paramOverrides", &CompilationOptions::paramOverrides)
         .def_readwrite("defaultLiblist", &CompilationOptions::defaultLiblist);
+        .def_readwrite("evalEffectiveWidth", &CompilationOptions::evalEffectiveWidth)
 
     py::class_<Compilation> comp(m, "Compilation");
     comp.def(py::init<>())
